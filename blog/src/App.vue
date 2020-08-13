@@ -1,14 +1,16 @@
 <template>
     <div id="app">
-        <router-link to="/foo">foo</router-link>
-        <router-link to="/bar">bar</router-link>
-        <router-view/>
+        <Mains/>
     </div>
 </template>
 
 <script>
+    import Mains from "./components/mains";
     export default {
         name: 'app',
+        components: {
+            Mains
+        }
     }
 </script>
 
