@@ -11,6 +11,14 @@ export const routes = [
         },
         component: resolve => require(['@/components/button/button'],resolve),
     },
+    {
+        path: '/radio',
+        name: 'radio',
+        meta: {
+            name: 'Radio 单选项'
+        },
+        component: resolve => require(['@/components/radio/radio'],resolve),
+    },
 ]
 
 export default new Router({

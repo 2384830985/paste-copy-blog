@@ -135,28 +135,14 @@
 
 <script>
     export default {
-
         name: "buttons",
+        created() {
+            this.ApiEvent = this.$utils.ApiEvent
+            this.ApiColumns = this.$utils.ApiColumns
+        },
         data(){
             return {
-                ApiEvent: [
-                    {
-                        title: '事件名称',
-                        key: 'name',
-                    },
-                    {
-                        title: '说明',
-                        key: 'explain',
-                    },
-                    {
-                        title: '回调参数',
-                        key: 'parameter',
-                    },
-                    {
-                        title: '版本',
-                        key: 'edition',
-                    },
-                ],
+                ApiEvent: [],
                 ApiEventData: [
                     {
                         name: 'click',
@@ -165,40 +151,15 @@
                         edition: '-',
                     }
                 ],
-                ApiColumns: [
-                    {
-                        title: '属性',
-                        key: 'attribute',
-                    },
-                    {
-                        title: '说明',
-                        key: 'explain',
-                    },
-                    {
-                        title: '类型',
-                        key: 'type',
-                    },
-                    {
-                        title: '默认值',
-                        key: 'default',
-                    },
-                    {
-                        title: '版本',
-                        key: 'edition',
-                    },
-                ],
+                ApiColumns: [],
                 ApiData:[
-                    {   //属性
-                        attribute: 'type',
-                        //说明
-                        explain: '类型有\'default\', \'primary\', \'info\', \'success\', \'warning\', \'error\'',
-                        //类型
-                        type: 'string',
-                        //默认值
-                        default: 'default',
-                        //版本
-                        edition: '-'
-                    },
+                    this.$utils.setApiData(
+                        'type',
+                        '类型有\'default\', \'primary\', \'info\', \'success\', \'warning\', \'error\'',
+                        'string',
+                        'default',
+                        '-'
+                    ),
                     {   //属性
                         attribute: 'loading',
                         //说明

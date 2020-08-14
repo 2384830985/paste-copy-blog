@@ -19,7 +19,9 @@
         },
         methods:{
             routePush(item){
-                this.$router.push(item.path)
+                if (this.$route.name!==item.name){
+                    this.$router.push(item.path)
+                }
             }
         },
         data(){
@@ -28,12 +30,13 @@
                 routeName: ''
             }
         },
-        mounted() {
-            setTimeout(()=>{
-                if (this.$route.name){
-                    this.routeName = this.$route.name
+        watch: {
+            $route(route){
+                console.log(route)
+                if (route.name){
+                    this.routeName = route.name
                 }
-            },100)
+            }
         },
     }
 </script>
