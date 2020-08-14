@@ -31,7 +31,7 @@ export const routes = [
         path: '/input',
         name: 'input',
         meta: {
-            name: 'Input 单选项'
+            name: 'Input 输入框'
         },
         component: resolve => require(['@/components/input/input'],resolve),
     },
