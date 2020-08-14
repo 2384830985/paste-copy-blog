@@ -175,16 +175,12 @@
                     <pc-checkbox :label="3" size="large">large3</pc-checkbox>
                     <pc-checkbox :label="4" size="large">large4</pc-checkbox>
                 </pc-checkbox-group>
-                <br/>
-                <br/>
                 <pc-checkbox-group v-model="checkBoxList">
                     <pc-checkbox :label="1">default1</pc-checkbox>
                     <pc-checkbox :label="2" disabled>default2</pc-checkbox>
                     <pc-checkbox :label="3">default3</pc-checkbox>
                     <pc-checkbox :label="4">default4</pc-checkbox>
                 </pc-checkbox-group>
-                <br/>
-                <br/>
                 <pc-checkbox-group v-model="checkBoxList">
                     <pc-checkbox :label="1" size="small">small1</pc-checkbox>
                     <pc-checkbox :label="2" size="small">small2</pc-checkbox>
@@ -228,8 +224,6 @@
                     <pc-checkbox :label="3"></pc-checkbox>
                     <pc-checkbox :label="4"disabled></pc-checkbox>
                 </pc-checkbox-group>
-                <br/>
-                <br/>
                 <pc-checkbox-group v-model="checkBoxList"
                                    type="button"
                                    entity>
@@ -238,8 +232,6 @@
                     <pc-checkbox :label="3"></pc-checkbox>
                     <pc-checkbox :label="4"></pc-checkbox>
                 </pc-checkbox-group>
-                <br/>
-                <br/>
                 <pc-checkbox-group v-model="checkBoxList"
                                    type="button"
                                    size="small"

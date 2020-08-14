@@ -28,6 +28,14 @@ export const routes = [
         component: resolve => require(['@/components/checkbox/checkbox'],resolve),
     },
     {
+        path: '/input',
+        name: 'input',
+        meta: {
+            name: 'Input 单选项'
+        },
+        component: resolve => require(['@/components/input/input'],resolve),
+    },
+    {
         path: '*',
         name: 'button',
         meta: {
