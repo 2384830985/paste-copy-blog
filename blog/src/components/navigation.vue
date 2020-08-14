@@ -26,7 +26,9 @@
         },
         data(){
             return {
-                routeDates: this.routeDate,
+                routeDates: this.routeDate.filter(item=>{
+                    return item.path!=='*'
+                }),
                 routeName: ''
             }
         },

@@ -19,6 +19,22 @@ export const routes = [
         },
         component: resolve => require(['@/components/radio/radio'],resolve),
     },
+    {
+        path: '/checkbox',
+        name: 'checkbox',
+        meta: {
+            name: 'Checkbox 单选项'
+        },
+        component: resolve => require(['@/components/checkbox/checkbox'],resolve),
+    },
+    {
+        path: '*',
+        name: 'button',
+        meta: {
+            name: 'Button 按钮'
+        },
+        component: resolve => require(['@/components/button/button'],resolve),
+    },
 ]
 
 export default new Router({

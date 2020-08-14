@@ -56,14 +56,70 @@
                 </pc-radio-group>
             </template>
         </code-block>
+        <file-text :ApiEventData="ApiEventData" :ApiData="ApiData"/>
     </div>
 </template>
 
 <script>
+
+    import FileText from "../../componentsUilst/fileText";
     export default {
         name: "radio",
+        components: {FileText},
         data(){
             return{
+                ApiEventData: [
+                    {
+                        name: 'on-change',
+                        explain: '值被改变的时候',
+                        parameter: '(val) => void',
+                        edition: '-',
+                    }
+                ],
+                ApiData: [
+                    this.$utils.setApiData(
+                        'type',
+                        '类型有button',
+                        'string',
+                        '',
+                        '-'
+                    ),
+                    this.$utils.setApiData(
+                        'entity',
+                        '是否铺满(button)',
+                        'boolean',
+                        'false',
+                        '-'
+                    ),
+                    this.$utils.setApiData(
+                        'disabled',
+                        '是否禁用',
+                        'boolean',
+                        'false',
+                        '-'
+                    ),
+                    this.$utils.setApiData(
+                        'trueValue',
+                        '正确的值',
+                        'string',
+                        '',
+                        '-'
+                    ),
+                    this.$utils.setApiData(
+                        'falseValue',
+                        '正确的值',
+                        'string',
+                        '',
+                        '-'
+                    ),
+                    this.$utils.setApiData(
+                        'size',
+                        '\'small\', \'large\', \'default\' (只在按钮状态下才可以使用)',
+                        'string',
+                        'default',
+                        '-'
+                    ),
+                ],
                 radioCode: `
                 <p>small</p>
                 <pc-radio-group  v-model="smallRadio" >

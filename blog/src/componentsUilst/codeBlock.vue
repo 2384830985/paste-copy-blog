@@ -55,6 +55,12 @@
     }
 </script>
 
+<style>
+    .t-red{
+        color: red;
+    }
+</style>
+
 <style scoped>
 
     .t-demo-con{

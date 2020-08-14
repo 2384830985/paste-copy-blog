@@ -414,7 +414,5 @@
 </script>
 
 <style>
-    .t-red{
-        color: red;
-    }
+
 </style>
