@@ -36,6 +36,22 @@ export const routes = [
         component: resolve => require(['@/components/input/input'],resolve),
     },
     {
+        path: '/select',
+        name: 'select',
+        meta: {
+            name: 'Select 下拉框'
+        },
+        component: resolve => require(['@/components/select/select'],resolve),
+    },
+    {
+        path: '/table',
+        name: 'table',
+        meta: {
+            name: 'Table 表格'
+        },
+        component: resolve => require(['@/components/table/table'],resolve),
+    },
+    {
         path: '*',
         name: 'button',
         meta: {

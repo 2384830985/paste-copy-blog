@@ -24,7 +24,7 @@ const ApiColumns = [
  * edition: //版本
  * @returns {{}}
  */
-const setApiData = function (attribute,explain,type,def,edition) {
+const setApiData = function (attribute,explain,type,def,edition='-') {
     return {
         attribute,
         explain,
@@ -33,8 +33,18 @@ const setApiData = function (attribute,explain,type,def,edition) {
         edition
     }
 }
+
+const setApiEventData = function (name,explain,parameter,edition='-') {
+    return {
+        name,
+        explain,
+        parameter,
+        edition
+    }
+}
 export default {
     ApiEvent,
     ApiColumns,
-    setApiData
+    setApiData,
+    setApiEventData,
 }
