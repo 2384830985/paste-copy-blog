@@ -88,14 +88,6 @@
                         align: 'center'
                     },
                     {
-                        type: 'expand',
-                        width: 45,
-                        align: 'center',
-                        render: (h, { row, index }) => {
-                            return h('div','支持render 注入写法')
-                        }
-                    },
-                    {
                         title: '支持render 注入写法，支持多层级操作',
                         key: 'name2',
                     },
@@ -163,6 +155,14 @@
                         type: 'index',
                         width: 40,
                         align: 'center'
+                    },
+                    {
+                        type: 'expand',
+                        width: 45,
+                        align: 'center',
+                        render: (h, { row, index }) => {
+                            return h('div','支持render 注入写法')
+                        }
                     },
                     {
                         title: '123',
